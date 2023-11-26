@@ -18,9 +18,9 @@ const CommentBox = ({ comment }: Props) => {
 	};
 
 	return (
-		<div className="flex flex-col border-l-[1px] border-zinc-500 rounded-md p-5">
+		<div className="flex flex-col border-l-[1px] border-zinc-500 rounded-md p-6">
 			<div>
-				<div className="rounded-[50%] ml-[-35px] mt-[-25px] bg-black w-[30px] h-[30px]">
+				<div className="rounded-[50%] ml-[-40px] mt-[-25px] bg-black w-[30px] h-[30px]">
 					<span className="ml-[40px] font-bold text-xl">Prasses</span>
 				</div>
 			</div>
@@ -44,8 +44,8 @@ const CommentBox = ({ comment }: Props) => {
 			)}
 			{comments.length != 0 && (
 				<div className="flex flex-col my-3">
-					{comments.map((comment) => (
-						<CommentBox comment={comment} />
+					{comments.map((comment,index) => (
+						<CommentBox key={index} comment={comment} />
 					))}
 				</div>
 			)}

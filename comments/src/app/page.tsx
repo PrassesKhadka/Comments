@@ -20,8 +20,8 @@ export default function Home() {
 			<CommentInput onComment={onComment} />
 
 			<div className="flex flex-col  mt-10">
-				{comments.map((comment) => (
-					<CommentBox comment={comment} />
+				{comments.map((comment,index) => (
+					<CommentBox key={index} comment={comment} />
 				))}
 			</div>
 		</div>
